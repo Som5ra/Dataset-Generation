@@ -1,0 +1,75 @@
+{
+  "numpy_seed": 1,
+  "blenderproc_seed": "33",
+ 
+  "models_path": "./3d_source/headband_anna",
+  "cc_textures_path": "./cc_textures",
+  "camera": {
+    "px": 600,
+    "py": 600,
+    "u0": 320,
+    "v0": 240,
+    "h": 1024,
+    "w": 1024,
+    "randomize_params_percent": 5.0,
+    "angle_bias_face_to_object": 0.7854,
+    "inplane_rot": 0.7854
+  },
+  "rendering": {
+    "max_num_samples": 32,
+    "denoiser": "OPTIX"
+  },
+  "scene": {
+    "room_size_multiplier_min": 4.0,
+    "room_size_multiplier_max": 8.0,
+    "simulate_physics": false,
+    "max_num_textures": 6,
+    "distractors": {
+      "min_count": 0,
+      "max_count": 2,
+      "min_size_rel_scene": 0.05,
+      "max_size_rel_scene": 0.1,
+      "custom_distractors": null,
+      "custom_distractor_proba": 0.5,
+      "displacement_max_amount": 0.0,
+      "pbr_noise": 0.5,
+      "emissive_prob": 0.0,
+      "emissive_min_strength": 2.0,
+      "emissive_max_strength": 5.0
+    },
+    "lights": {
+      "min_count": 8,
+      "max_count": 15,
+      "min_intensity": 5,
+      "max_intensity": 30
+    },
+    "objects": {
+      "min_count": 1,
+      "max_count": 3,
+      "multiple_occurences": true,
+      "scale_noise": 0.2,
+      "displacement_max_amount": 0.0,
+      "pbr_noise": 0.3,
+      "cam_min_dist_rel": 1.0,
+      "cam_max_dist_rel": 4.0
+    }
+  },
+  "dataset": {
+    "save_path": "./dataset/20241217_anna",
+    "scenes_per_run": 1,
+    "num_scenes": 2000,
+    "images_per_scene": 5,
+    "empty_images_per_scene": 0,
+    "pose": false,
+    "depth": false,
+    "normals": false,
+    "segmentation": false,
+    "detection": true,
+    "detection_params": {
+      "min_side_size_px": 15,
+      "min_visibility_percentage": 0.3,
+      "points_sampling_occlusion": 100
+    }
+  }
+}
+
